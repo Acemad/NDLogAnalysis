@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 import psycopg2
+from queries import QUERY1, QUERY2, QUERY3
 
 
 def main():
-    print('Hello\n')
+    printResults(queryDB(QUERY2))
+
+
+def printResults(rows):
+    for row in rows:
+        print('{} - {} Views'.format(row[0], row[1]))
 
 
 def queryDB(query):
