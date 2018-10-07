@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import psycopg2
+import re
 from queries import QUERY1, QUERY2, QUERY3
 
 
@@ -9,7 +10,12 @@ def main():
 
 def printResults(rows):
     for row in rows:
-        print('{} - {} Views'.format(row[0], row[1]))
+        print('"{}" - {} Views'.format(row[0], row[1]))
+
+
+def printResultsQ3(rows):
+    for row in rows:
+        print('{} - {}% Errors'.format(re.sub(' +', ' ', row[0]), row[1]))
 
 
 def queryDB(query):
