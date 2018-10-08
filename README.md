@@ -43,3 +43,7 @@ The program is written and tested in Python 3.5, so you should run it using at l
 $ python3 analysis.py
 ```
 You'll be presented with a menu, and prompted to enter one of the options to launch a specific database query. Query results will be displayed after processing.
+
+## Output
+
+Please check [OUTPUT](./OUTPUT.md) for an example of the program's output.
