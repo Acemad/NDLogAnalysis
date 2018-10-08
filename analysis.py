@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import psycopg2
-import re
 from queries import QUERY1, QUERY2, QUERY3
 
 
@@ -41,7 +40,7 @@ def printResults(rows):
 def printResultsQ3(rows):
     print()
     for row in rows:
-        print('{} - {}% Errors'.format(re.sub(' +', ' ', row[0]), row[1]))
+        print('{} - {}% Errors'.format(row[0].strftime('%B %d, %Y'), row[1]))
     print()
 
 

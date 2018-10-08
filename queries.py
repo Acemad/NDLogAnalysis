@@ -19,7 +19,7 @@ ORDER BY NBViews DESC;
 '''
 
 QUERY3 = '''
-SELECT to_char(date,'Month DD, YYYY'), trunc(cast(rate AS numeric),2)
+SELECT date, trunc(cast(rate AS numeric),2)
 FROM
  (
   SELECT req_day.date,
