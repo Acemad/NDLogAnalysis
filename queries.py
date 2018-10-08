@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 QUERY1 = '''
 SELECT title, count(*) as NBViews
 FROM log, articles
