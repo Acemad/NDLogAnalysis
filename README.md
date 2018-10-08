@@ -8,7 +8,7 @@ This is my submission for the Log Analysis project. It is composed of two Python
 
 ## Design
 
-The program is structured in a very simple way, queries are stored in `queries.py` and imported by `analysis.py` which provides and interactive text-based interface allowing the user to choose which query to execute. 
+The program is structured in a very simple way, queries are stored in `queries.py` and imported by `analysis.py` which provides an interactive text-based interface allowing the user to choose which query to execute. 
 
 Sorting / filtering data is done on the database side, our program is only concerned by querying the database and correctly displaying the output of the queries. Therefore, we've implemented a generic database query function `queryDB()` and functions to display the results of that function `printResults()` and `printResultsQ3()`.
 
