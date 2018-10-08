@@ -14,6 +14,7 @@ Greetings ! What kind of information are you interested in ?
 
 
 def main():
+    '''The main function of the program'''
     print(MENU)
     choice = ''
     while (choice != 'q'):
@@ -30,6 +31,7 @@ def main():
 
 
 def printResults(rows):
+    ''' Format and print results of query 1 & 2 '''
     print()
     for row in rows:
         print('"{}" - {} Views'.format(row[0], row[1]))
@@ -37,6 +39,7 @@ def printResults(rows):
 
 
 def printResultsQ3(rows):
+    ''' Format and print results of query 3 '''
     print()
     for row in rows:
         print('{} - {}% Errors'.format(row[0].strftime('%B %d, %Y'), row[1]))
@@ -44,6 +47,10 @@ def printResultsQ3(rows):
 
 
 def queryDB(query):
+    '''
+    Query the database and returns the results,
+    Will handle openning and closing connection to the DB
+    '''
     db = psycopg2.connect('dbname=news')
     cursor = db.cursor()
     cursor.execute(query)
