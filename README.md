@@ -6,6 +6,12 @@ This is my submission for the Log Analysis project. It is composed of two Python
 * `analysis.py` : Main program.
 * `queries.py` : Contains the SQL queries needed to perform the requested analysis.
 
+## Design
+
+The program is structured in a very simple way, queries are stored in `queries.py` and imported by `analysis.py` which provides and interactive text-based interface allowing the user to choose which query to execute. 
+
+Sorting / filtering data is done on the database side, our program is only concerned by querying the database and correctly displaying the output of the queries. Therefore, we've implemented a generic database query function `queryDB()` and functions to display the results of that function `printResults()` and `printResultsQ3()`.
+
 ## Prerequisites
 
 This program interacts with the `news` database obtained from the project's page at Udacity.com.
@@ -37,4 +43,3 @@ The program is written and tested in Python 3.5, so you should run it using at l
 $ python3 analysis.py
 ```
 You'll be presented with a menu, and prompted to enter one of the options to launch a specific database query. Query results will be displayed after processing.
-
